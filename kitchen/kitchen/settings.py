@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-l966lp&)a1289ilo2t9uyi^_b6^79(o_o%k!u_kp0zxg1t(jz5')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.eneviron.get('DJANGO_DEBUG','')!='False'
+DEBUG = os.environ.get('DJANGO_DEBUG','')!='False'
 
 ALLOWED_HOSTS = []
 
@@ -120,6 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT=BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
